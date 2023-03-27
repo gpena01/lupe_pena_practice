@@ -7,6 +7,7 @@ public class Main5 {
         //the corresponding index in the array
         int[] myNumbers = {3, 6, 7, 10, 23};
         for (int i = 0; i < myNumbers.length; i++) {
+            i = myNumbers[i];
             System.out.println(i + ": " + myNumbers[i]);
         }
     }
