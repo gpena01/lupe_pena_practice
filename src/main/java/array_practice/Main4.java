@@ -13,6 +13,7 @@ public class Main4 {
         int lastValue = myNumbers[myNumbers.length - 1];
         // int someValue = myNumbers[myNumbers.length];
         // int myNumbers[5] = 23;
+        System.out.println(firstValue);
         System.out.println(lastValue);
         // System.out.println(someValue);
     }
