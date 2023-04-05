@@ -7,7 +7,7 @@ public class Customer {
     // email and Product[] purchasedProducts
     // Add a getCustomerInfo method to display detailed customer information
     // along with products purchased from customer
-    private String customerName;
+    private Customer[] customerName;
     private String email;
     private Product[] purchasedProducts;
     private String customerInfo;
@@ -32,7 +32,7 @@ public class Customer {
         this.addresses = addresses;
     }
 
-    public Customer(String customerName, String email, Address[] addresses, Product[] purchasedProducts) {
+    public Customer(Customer[] customerName, String email, Address[] addresses, Product[] purchasedProducts) {
         this.customerName = customerName;
         this.email = email;
         this.addresses = addresses;
