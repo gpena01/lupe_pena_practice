@@ -1,6 +1,6 @@
-package homeworkMarch31st;
+package homework_March31st;
 
-import homeworkMarch31st.Addresssub_package.Address;
+import homework_March31st.address_sub_package.Address;
 
 public class Customer {
     // Create a Customer class to include customerName, address,
@@ -11,22 +11,31 @@ public class Customer {
     private String email;
     private Product[] purchasedProducts;
     private String customerInfo;
-    private Address[] address;
-    public void addAddress(Address[] address) {
-//        Address[0] = address;
+    private Address[] addresses;
+    private int numOfAddresses = 0;
+    public void addAddress(Address address) {
+        int i = 0;
+        for (; i < addresses.length; i++) {
+            if (addresses[i] == null) {
+                break;
+            }
+        }
+        addresses[i] = address;
+        addresses[numOfAddresses++] = address;
     }
 
-    public Address[] getAddress() {
-        return address;
+    public Address[] getAddresses() {
+        return addresses;
     }
 
-    public void setAddress(Address[] address) {
-        this.address = address;
+    public void setAddresses(Address[] addresses) {
+        this.addresses = addresses;
     }
 
-    public Customer(String customerName, String email, Product[] purchasedProducts) {
+    public Customer(String customerName, String email, Address[] addresses, Product[] purchasedProducts) {
         this.customerName = customerName;
         this.email = email;
+        this.addresses = addresses;
         this.purchasedProducts = purchasedProducts;
     }
 
@@ -63,12 +72,22 @@ public class Customer {
 
     public String getCustomerInfo() {
         String customerInfo = "";
-        System.out.println("Customer Info");
-        System.out.println("-------------");
-        customerInfo = "Name: " + customerName + "\n" +
-                "Email: " + email + "\n\n" + "Items Purchased:\n" + "---------------"
+        customerInfo = "Customer Info\n" + "---------------\n" + "Name: " + customerName + "\n" +
+                "Email: " + email + "\n" + "" +
+                "\nAddress(es):"
         + "\n";
 
+        for (int i = 0; i < addresses.length; i++) {
+            if (addresses[i] == null) {
+                break;
+            }
+            customerInfo += addresses[i].getStreetNumber() + " "
+                    + addresses[i].getStreetName() + " "
+                    + addresses[i].getCity() + ", "
+                    + addresses[i].getState() + " "
+                    + addresses[i].getZipCode() + "\n";
+        }
+        customerInfo += "\nItems Purchased: \n" + "---------------\n";
         for (Product product : purchasedProducts) {
             customerInfo += product.getProductName() + ": $" +
                     product.getPrice() + "\n";

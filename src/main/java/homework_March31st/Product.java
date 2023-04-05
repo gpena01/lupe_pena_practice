@@ -1,4 +1,4 @@
-package homeworkMarch31st;
+package homework_March31st;
 
 public class Product {
     // Create a Product class to include product name and price variables
