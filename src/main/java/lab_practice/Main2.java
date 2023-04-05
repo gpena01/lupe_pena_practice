@@ -1,6 +1,4 @@
-package constructor_practice;
-
-import constructor_practice.StudentRecord;
+package lab_practice;
 
 public class Main2 {
     public static void main(String[] args) {

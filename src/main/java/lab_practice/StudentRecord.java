@@ -1,4 +1,4 @@
-package constructor_practice;
+package lab_practice;
 
 public class StudentRecord {
     private static int studentCount;
