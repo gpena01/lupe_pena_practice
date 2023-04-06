@@ -8,14 +8,6 @@ public class Address {
     private String state;
     private int zipCode;
 
-    public int getZipCode() {
-        return zipCode;
-    }
-
-    public boolean isPrimaryAddress() {
-        return isPrimaryAddress;
-    }
-
     public Address(boolean isPrimaryAddress,
                    int streetNumber,
                    String streetName,
@@ -29,6 +21,15 @@ public class Address {
         this.state = state;
         this.zipCode = zipCode;
     }
+
+    public int getZipCode() {
+        return zipCode;
+    }
+
+    public boolean isPrimaryAddress() {
+        return isPrimaryAddress;
+    }
+
     public int getStreetNumber() {
         return streetNumber;
     }

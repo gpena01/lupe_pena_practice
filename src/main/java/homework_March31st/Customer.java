@@ -7,12 +7,20 @@ public class Customer {
     // email and Product[] purchasedProducts
     // Add a getCustomerInfo method to display detailed customer information
     // along with products purchased from customer
-    private Customer[] customerName;
+    private CustomerName customerName;
     private String email;
     private Product[] purchasedProducts;
     private String customerInfo;
     private Address[] addresses;
     private int numOfAddresses = 0;
+
+    public Customer(CustomerName customerName, String email, Address[] addresses, Product[] purchasedProducts) {
+        this.customerName = customerName;
+        this.email = email;
+        this.addresses = addresses;
+        this.purchasedProducts = purchasedProducts;
+    }
+
     public void addAddress(Address address) {
         int i = 0;
         for (; i < addresses.length; i++) {
@@ -24,6 +32,32 @@ public class Customer {
         addresses[numOfAddresses++] = address;
     }
 
+    public String getCustomerInfo() {
+        String customerInfo = "";
+        customerInfo = "Customer Info\n" + "---------------\n" +
+                "Name: " + customerName.getFullName() + "\n" +
+                "Email: " + email + "\n" + "" +
+                "\nAddress(es):"
+                + "\n";
+
+        for (int i = 0; i < addresses.length; i++) {
+            if (addresses[i] == null) {
+                break;
+            }
+            customerInfo += addresses[i].getStreetNumber() + " "
+                    + addresses[i].getStreetName() + " "
+                    + addresses[i].getCity() + ", "
+                    + addresses[i].getState() + " "
+                    + addresses[i].getZipCode() + "\n";
+        }
+        customerInfo += "\nItems Purchased: \n" + "---------------\n";
+        for (Product product : purchasedProducts) {
+            customerInfo += product.getProductName() + ": $" +
+                    product.getPrice() + "\n";
+        }
+        return customerInfo;
+    }
+
     public Address[] getAddresses() {
         return addresses;
     }
@@ -32,22 +66,7 @@ public class Customer {
         this.addresses = addresses;
     }
 
-    public Customer(Customer[] customerName, String email, Address[] addresses, Product[] purchasedProducts) {
-        this.customerName = customerName;
-        this.email = email;
-        this.addresses = addresses;
-        this.purchasedProducts = purchasedProducts;
-    }
-
     public void addAddress() {
-    }
-
-    public String getCustomerName() {
-        return customerName;
-    }
-
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
     }
 
     public String getEmail() {
@@ -68,30 +87,5 @@ public class Customer {
 
     public void setCustomerInfo(String customerInfo) {
         this.customerInfo = customerInfo;
-    }
-
-    public String getCustomerInfo() {
-        String customerInfo = "";
-        customerInfo = "Customer Info\n" + "---------------\n" + "Name: " + customerName + "\n" +
-                "Email: " + email + "\n" + "" +
-                "\nAddress(es):"
-        + "\n";
-
-        for (int i = 0; i < addresses.length; i++) {
-            if (addresses[i] == null) {
-                break;
-            }
-            customerInfo += addresses[i].getStreetNumber() + " "
-                    + addresses[i].getStreetName() + " "
-                    + addresses[i].getCity() + ", "
-                    + addresses[i].getState() + " "
-                    + addresses[i].getZipCode() + "\n";
-        }
-        customerInfo += "\nItems Purchased: \n" + "---------------\n";
-        for (Product product : purchasedProducts) {
-            customerInfo += product.getProductName() + ": $" +
-                    product.getPrice() + "\n";
-        }
-        return customerInfo;
     }
 }
