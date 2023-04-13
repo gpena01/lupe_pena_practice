@@ -21,12 +21,9 @@ public class Department {
     public int letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked() {
 
         int employeesWorked = 0;
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i] != null) {
-                String worked = employees[i].work();
-                if (worked.contains("worked")) {
+        for (int i = 0; i < currentIndex; i++) {
+            if (employees[i].work().contains("worked")) {
                     employeesWorked++;
-                }
             }
         }
         return employeesWorked;

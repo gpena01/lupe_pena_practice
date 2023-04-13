@@ -5,13 +5,6 @@ import java.time.LocalDate;
 public class HRClient {
     public static void main(String[] args) {
 
-//        Employee employee1 = new Employee("Jack",
-//                LocalDate.of(2021, 11, 11));
-//
-//        Employee employee2 = new Employee("Lily",
-//                LocalDate.of(2008, 01, 01));
-//
-
 
         Employee employee3 = new SalariedEmployee("Lily",
                 LocalDate.of(2007, 9, 24),
@@ -29,7 +22,7 @@ public class HRClient {
 
         Employee employee6 = new CommissionedEmployee("Java",
                 LocalDate.of(2023, 04, 12),
-                .23, new double[] {85, 100, 375});
+                .23, new double[]{85, 100, 375});
 
         System.out.println(employee3.getName() +
                 " has been with us for " +
@@ -65,7 +58,7 @@ public class HRClient {
         department.addEmployee(employee6);
 
         System.out.println("Total number of employees in " + department.getName()
-        + ": " + department.letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked());
+                + ": " + department.letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked());
         double totalMonthlyCompensation = department.computeDepartmentMonthlyTotalCompensation();
         System.out.println("Total monthly compensation: $" + totalMonthlyCompensation);
     }
