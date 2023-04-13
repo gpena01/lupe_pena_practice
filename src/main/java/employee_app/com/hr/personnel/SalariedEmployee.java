@@ -15,6 +15,13 @@ public class SalariedEmployee extends Employee {
     // create a method
 
     @Override
+    public String getEmployeeInfo() {
+        return "name: " + getName()
+                + "\nhire date: " + getHireDate()
+                + "\nmonthlySalary: " + monthlySalary;
+    }
+
+    @Override
     public double computeMonthlyCompensation() {
         return monthlySalary;
     }

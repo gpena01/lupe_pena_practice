@@ -13,6 +13,14 @@ public class CommissionedEmployee extends Employee {
     }
 
     @Override
+    public String getEmployeeInfo() {
+        return "name: " + getName()
+                + "\nhire date: " + getHireDate()
+                + "\ncommissionRate: " + commissionRate
+                + "\nmonthlySales: " + monthlySales;
+    }
+
+    @Override
     public double computeMonthlyCompensation() {
         double totalCompensation = 0.0;
         for (double eachSale : monthlySales) {

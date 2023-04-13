@@ -5,23 +5,13 @@ import java.time.LocalDate;
 public class HRClient {
     public static void main(String[] args) {
 
-        Employee employee1 = new Employee("Jack",
-                LocalDate.of(2021, 11, 11));
+//        Employee employee1 = new Employee("Jack",
+//                LocalDate.of(2021, 11, 11));
+//
+//        Employee employee2 = new Employee("Lily",
+//                LocalDate.of(2008, 01, 01));
+//
 
-        Employee employee2 = new Employee("Lily",
-                LocalDate.of(2008, 01, 01));
-
-        System.out.println(employee1.getName() +
-                " has been with us for " +
-                employee1.computeNumberOfYearsWorkedSinceHired() + " years.");
-        System.out.println(employee2.getName() +
-                " has been with us for " +
-                employee2.computeNumberOfYearsWorkedSinceHired() + " years.");
-        System.out.println();
-
-        System.out.println(employee1.getEmployeeInfo());
-        System.out.println();
-        System.out.println(employee2.getEmployeeInfo());
 
         Employee employee3 = new SalariedEmployee("Lily",
                 LocalDate.of(2007, 9, 24),
@@ -40,6 +30,32 @@ public class HRClient {
         Employee employee6 = new CommissionedEmployee("Java",
                 LocalDate.of(2023, 04, 12),
                 .23, new double[] {85, 100, 375});
+
+        System.out.println(employee3.getName() +
+                " has been with us for " +
+                employee3.computeNumberOfYearsWorkedSinceHired() + " years.");
+
+        System.out.println(employee4.getName() +
+                " has been with us for " +
+                employee4.computeNumberOfYearsWorkedSinceHired() + " years.");
+
+        System.out.println(employee5.getName() +
+                " has been with us for " +
+                employee5.computeNumberOfYearsWorkedSinceHired() + " years.");
+
+        System.out.println(employee6.getName() +
+                " has been with us for " +
+                employee6.computeNumberOfYearsWorkedSinceHired() + " years.");
+        System.out.println();
+
+        System.out.println(employee3.getEmployeeInfo());
+        System.out.println();
+        System.out.println(employee4.getEmployeeInfo());
+        System.out.println();
+        System.out.println(employee5.getEmployeeInfo());
+        System.out.println();
+        System.out.println(employee6.getEmployeeInfo());
+        System.out.println();
 
         Department department = new Department("R&D",
                 "Remote");

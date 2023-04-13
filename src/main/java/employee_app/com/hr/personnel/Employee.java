@@ -1,8 +1,8 @@
 package employee_app.com.hr.personnel;
 
 import java.time.LocalDate;
-
-public class Employee {
+// convert Employee class into an abstract class
+public abstract class Employee {
     private String name;
     private LocalDate hireDate;
 
@@ -17,16 +17,13 @@ public class Employee {
         return LocalDate.now().getYear() - hireDate.getYear();
     }
 
-    public String getEmployeeInfo() {
-        return "name = " + name + "\n" + "hireDate = " + hireDate;
-    }
+    public abstract String getEmployeeInfo();
 
     public String work() {
         return name + " worked.";
     }
-    public double computeMonthlyCompensation() {
-        return 0.0;
-    }
+    // convert computeMonthlyCompensation() to abstract method
+    public abstract double computeMonthlyCompensation();
 
     // generate getters and setters
     public String getName() {

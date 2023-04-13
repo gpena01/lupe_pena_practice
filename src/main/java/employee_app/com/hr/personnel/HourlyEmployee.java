@@ -14,6 +14,14 @@ public class HourlyEmployee extends Employee {
         this.hourlyRate = hourlyRate;
     }
 
+    @Override
+    public String getEmployeeInfo() {
+        return "name: " + getName()
+                + "\nhire date: " + getHireDate()
+                + "\nhourlyRate: " + hourlyRate
+                + "\nhoursWorkedPerMonth: " + hoursWorkedPerMonth;
+    }
+
     // create method
     @Override
     public double computeMonthlyCompensation() {
