@@ -16,10 +16,10 @@ public class HourlyEmployee extends Employee {
 
     @Override
     public String getEmployeeInfo() {
-        return "name: " + getName()
-                + "\nhire date: " + getHireDate()
-                + "\nhourlyRate: " + hourlyRate
-                + "\nhoursWorkedPerMonth: " + hoursWorkedPerMonth;
+        return "name: " + getName() + "\n"
+                + "hire date: " + getHireDate() + "\n"
+                + "hourlyRate: " + hourlyRate + "\n"
+                + "hoursWorkedPerMonth: " + hoursWorkedPerMonth;
     }
 
     // create method

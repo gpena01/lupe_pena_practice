@@ -14,10 +14,10 @@ public class CommissionedEmployee extends Employee {
 
     @Override
     public String getEmployeeInfo() {
-        return "name: " + getName()
-                + "\nhire date: " + getHireDate()
-                + "\ncommissionRate: " + commissionRate
-                + "\nmonthlySales: " + monthlySales;
+        return "name: " + getName() + "\n"
+                + "hire date: " + getHireDate() + "\n"
+                + "commissionRate: " + commissionRate + "\n"
+                + "monthlySales: " + computeMonthlyCompensation();
     }
 
     @Override
