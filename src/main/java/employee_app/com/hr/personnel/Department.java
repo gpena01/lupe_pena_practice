@@ -7,8 +7,6 @@ public class Department {
     private Employee[] employees = new Employee[100];
 
     // Create constructor
-
-
     public Department(String name, String location) {
         this.name = name;
         this.location = location;
@@ -32,6 +30,16 @@ public class Department {
             }
         }
         return employeesWorked;
+    }
+    public double computeDepartmentMonthlyTotalCompensation() {
+        // Compute total monthly compensation of all
+        // employees in that department
+        double totalCompensation = 0.0;
+        for (int i = 0; i < currentIndex; i++) {
+            double monthlyCompensation = employees[i].computeMonthlyCompensation();
+            totalCompensation += monthlyCompensation;
+        }
+        return totalCompensation;
     }
 
     //--generate Getters and Setters

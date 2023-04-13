@@ -37,13 +37,20 @@ public class HRClient {
                 100);
         System.out.println();
 
+        Employee employee6 = new CommissionedEmployee("Java",
+                LocalDate.of(2023, 04, 12),
+                .23, new double[] {85, 100, 375});
+
         Department department = new Department("R&D",
                 "Remote");
         department.addEmployee(employee3);
         department.addEmployee(employee4);
         department.addEmployee(employee5);
+        department.addEmployee(employee6);
 
         System.out.println("Total number of employees in " + department.getName()
         + ": " + department.letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked());
+        double totalMonthlyCompensation = department.computeDepartmentMonthlyTotalCompensation();
+        System.out.println("Total monthly compensation: $" + totalMonthlyCompensation);
     }
 }

@@ -24,6 +24,9 @@ public class Employee {
     public String work() {
         return name + " worked.";
     }
+    public double computeMonthlyCompensation() {
+        return 0.0;
+    }
 
     // generate getters and setters
     public String getName() {

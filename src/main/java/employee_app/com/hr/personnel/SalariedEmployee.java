@@ -11,4 +11,11 @@ public class SalariedEmployee extends Employee {
         super(name, hireDate);
         this.monthlySalary = monthlySalary;
     }
+
+    // create a method
+
+    @Override
+    public double computeMonthlyCompensation() {
+        return monthlySalary;
+    }
 }
