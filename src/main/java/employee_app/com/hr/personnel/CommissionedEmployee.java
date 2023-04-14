@@ -1,12 +1,14 @@
 package employee_app.com.hr.personnel;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CommissionedEmployee extends Employee {
     private double commissionRate;
-    private double[] monthlySales;
+    private List<Double> monthlySales;
 
-    public CommissionedEmployee(String name, LocalDate hireDate, double commissionRate, double[] monthlySales) {
+    public CommissionedEmployee(String name, LocalDate hireDate, double commissionRate, ArrayList<Double> monthlySales) {
         super(name, hireDate);
         this.commissionRate = commissionRate;
         this.monthlySales = monthlySales;

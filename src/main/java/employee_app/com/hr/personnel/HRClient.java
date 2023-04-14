@@ -1,6 +1,8 @@
 package employee_app.com.hr.personnel;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class HRClient {
     public static void main(String[] args) {
@@ -22,7 +24,7 @@ public class HRClient {
 
         Employee employee6 = new CommissionedEmployee("Java",
                 LocalDate.of(2023, 04, 12),
-                .23, new double[]{85, 100, 375});
+                .23, new ArrayList<>(Arrays.asList(85.0, 100.0, 375.0)));
 
         System.out.println(employee3.getName() +
                 " has been with us for " +

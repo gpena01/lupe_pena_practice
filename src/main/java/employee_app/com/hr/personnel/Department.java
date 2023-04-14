@@ -1,10 +1,12 @@
 package employee_app.com.hr.personnel;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Department {
     private String name;
     private String location;
-    private int currentIndex = 0;
-    private Employee[] employees = new Employee[100];
+    private List<Employee> employees = new ArrayList<>();
 
     // Create constructor
     public Department(String name, String location) {
@@ -15,14 +17,14 @@ public class Department {
     // Create methods
     public void addEmployee(Employee employee) {
 
-        employees[currentIndex++] = employee;
+        employees.add(employee);
     }
 
     public int letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked() {
 
         int employeesWorked = 0;
-        for (int i = 0; i < currentIndex; i++) {
-            if (employees[i].work().contains("worked")) {
+        for (Employee employee : employees) {
+            if (employee.work().contains("worked")) {
                     employeesWorked++;
             }
         }
@@ -32,21 +34,14 @@ public class Department {
         // Compute total monthly compensation of all
         // employees in that department
         double totalCompensation = 0.0;
-        for (int i = 0; i < currentIndex; i++) {
-            double monthlyCompensation = employees[i].computeMonthlyCompensation();
+        for (Employee employee : employees) {
+            double monthlyCompensation = employee.computeMonthlyCompensation();
             totalCompensation += monthlyCompensation;
         }
         return totalCompensation;
     }
 
     //--generate Getters and Setters
-    public Employee[] getEmployees() {
-        return employees;
-    }
-
-    public void setEmployees(Employee[] employees) {
-        this.employees = employees;
-    }
 
     public String getName() {
         return name;
@@ -62,9 +57,5 @@ public class Department {
 
     public void setLocation(String location) {
         this.location = location;
-    }
-
-    public int getCurrentIndex() {
-        return currentIndex;
     }
 }
