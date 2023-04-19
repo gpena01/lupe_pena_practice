@@ -6,10 +6,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int value;
-        if(scanner.hasNextInt()) {
+        if (scanner.hasNextInt()) {
             value = scanner.nextInt();
             System.out.println(value);
-            } else {
+        } else {
             try {
                 // line 15 causes the error bc I'm throwing the exception
                 throw new MyOwnException("Invalid integer");
