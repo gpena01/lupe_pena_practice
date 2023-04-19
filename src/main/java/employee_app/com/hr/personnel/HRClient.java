@@ -7,7 +7,8 @@ import java.util.Arrays;
 public class HRClient {
     public static void main(String[] args) {
 
-
+        // instantiate 2 SalariedEmployee, 1 HourlyEmployee and
+        // 1 CommissionedEmployee
         Employee employee3 = new SalariedEmployee("Lily",
                 LocalDate.of(2007, 9, 24),
                 10000);
