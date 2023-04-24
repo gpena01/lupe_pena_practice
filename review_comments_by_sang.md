@@ -16,3 +16,10 @@ weekly 1-1.
 ## April 17 (Monday morning)
 - employee_app worked fine up to part #5
 - no "sba_exercise" work is done
+
+
+## April 24th
+
+- "sba_core_java"
+  - both exercise1 and exercise2 are done correctly
+  - there are some minor violations of good coding practices
