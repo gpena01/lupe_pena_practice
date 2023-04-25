@@ -43,12 +43,11 @@ class Cricket implements Sport {
 
     @Override
     public void calculateAvgAge(int[] age) {
-        double averageAge = 0.0;
         double sum = 0.0;
         for(int i = 0; i < age.length; i++) {
             sum += age[i];
-            averageAge = sum / age.length;
         }
+        double averageAge = sum / age.length;
         System.out.printf("The average age of the team is %.2f %n", averageAge);
     }
 
@@ -82,12 +81,11 @@ class Football implements Sport {
 
     @Override
     public void calculateAvgAge(int[] age) {
-        double averageAge = 0.0;
         double sum = 0.0;
         for(int i = 0; i < age.length; i++) {
             sum += age[i];
-            averageAge = sum / age.length;
         }
+        double averageAge = sum / age.length;
         System.out.printf("The average age of the team is %.2f %n", averageAge);
     }
 
