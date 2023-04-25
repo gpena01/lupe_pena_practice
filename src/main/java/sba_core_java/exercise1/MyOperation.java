@@ -10,7 +10,7 @@ public class MyOperation implements IMyOperations {
     }
 
     public MyOperation() {
-        this.myArrayList = new ArrayList<>();
+        myArrayList = new ArrayList<>();
     }
 
     public void setMyArrayList(ArrayList<String> myArrayList) {

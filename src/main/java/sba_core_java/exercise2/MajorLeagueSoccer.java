@@ -6,7 +6,7 @@ public class MajorLeagueSoccer {
     private int[] playerNumberArray;
 
     public MajorLeagueSoccer() {
-        this.playerNumberArray = new int[11];
+        playerNumberArray = new int[11];
         for(int i = 0; i < playerNumberArray.length; i++) {
             playerNumberArray[i] = i + 1;
         }

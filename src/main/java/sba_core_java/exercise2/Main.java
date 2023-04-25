@@ -13,6 +13,7 @@ public class Main {
         }
         average = sum / myNumberArray.length;
         System.out.println(average);
+
         MajorLeagueSoccer majorLeagueSoccer = new MajorLeagueSoccer();
         int[] playerNumberArray = majorLeagueSoccer.getPlayerNumberArray();
 

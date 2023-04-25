@@ -1,5 +1,6 @@
 package sba_core_java.exercise1;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -27,6 +28,9 @@ public class Main {
                 "passion"};
         MyOperation myOperation = new MyOperation();
         myOperation.convertStringArrayIntoArrayList(myStringArrayTestValue);
+        ArrayList<String> myArrayList = myOperation.getMyArrayList();
+        System.out.println(myArrayList);
+
         myOperation.replaceAnElementInTheStringArrayListGiven(1);
         myOperation.createANewArrayListFromExistingArray();
 
